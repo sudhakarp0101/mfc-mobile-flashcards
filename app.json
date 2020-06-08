@@ -1,8 +1,8 @@
 {
-  "name": "my-stack-navigator",
-  "displayName": "my-stack-navigator",
+  "name": "mfc-mobile-flashcards",
+  "displayName": "mfc mobile flashcards",
   "expo": {
-    "name": "my-stack-navigator",
+    "name": "mfc-mobile-flashcards",
     "slug": "expo-template-bare",
     "version": "1.0.0",
     "platforms": [
