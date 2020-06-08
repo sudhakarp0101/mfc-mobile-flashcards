@@ -7,6 +7,8 @@ import { connect } from 'react-redux';
 import { addDeck } from '../actions/index';
 import { saveDeckTitleAS } from '../utils/api';
 import { StackActions, NavigationActions } from 'react-navigation';
+import { CommonActions } from "@react-navigation/native";
+import { TabActions } from "@react-navigation/native"
 
 export class MfcAddDeck extends Component {
     static propTypes = {
@@ -26,17 +28,19 @@ export class MfcAddDeck extends Component {
         addDeck(text);
         saveDeckTitleAS(text);
 
-        const resetAction = StackActions.reset({
+        const resetAction = CommonActions.reset({
             index: 1,
-            actions: [
-                NavigationActions.navigate({ routeName: 'Home' }),
-                NavigationActions.navigate({
-                    routeName: 'MfcDeckDetail',
-                    params: { title: text }
-                })
-            ]
+            routes: [
+                { name: "MfcDeckList" },
+                {
+                    name: "MfcDeckDetail",
+                    params: { title: text },
+                },
+            ],
         });
+        const jumpToAction = TabActions.jumpTo("DECKS");
         navigation.dispatch(resetAction);
+        navigation.dispatch(jumpToAction)
 
         this.setState(() => ({ text: '' }));
     };
