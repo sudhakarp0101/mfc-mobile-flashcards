@@ -8,4 +8,4 @@ export const lightGreen = '#cdeccd';
 export const orange = '#f26f28';
 export const blue = '#4e4cb8';
 export const pink = '#b93fb3';
-export const safron = '#ff9999'
+export const safron = '#ff8080'

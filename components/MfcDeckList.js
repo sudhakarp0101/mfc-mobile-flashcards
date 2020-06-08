@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import Deck from './Deck';
-import { gray, green } from '../utils/colors';
+import { gray, green, safron } from '../utils/colors';
 import { handleInitialData } from '../actions/index';
 
 export class MfcDeckList extends Component {
@@ -55,10 +55,10 @@ const styles = StyleSheet.create({
         backgroundColor: gray
     },
     title: {
-        fontSize: 40,
+        fontSize: 30,
         textAlign: 'center',
         marginBottom: 16,
-        color: green
+        color: safron
     }
 });
 
